@@ -1,0 +1,15 @@
+<div class='container'>
+  <h1>Awsome Cocktails</h1>
+  <div class="row">
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+      <% @cocktails.each do |cocktail| %>
+      <p><%= link_to cocktail.name, cocktail_path(cocktail) %></p>
+      <p><%= link_to "Delete Cocktail", cocktail_path(cocktail), method: "_delete", data: { comfirm: "Are you sure?" } %></p>
+      <p><%= link_to "New dose", new_cocktail_dose_path(cocktail.id) %></p>
+      <% end %>
+    </div>
+  </div>
+
+    </div>
+
+  <p><%= link_to "New Cocktail", new_cocktail_path %></p>
