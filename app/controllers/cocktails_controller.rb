@@ -1,5 +1,4 @@
 class CocktailsController < ApplicationController
-
   before_action :find_cocktails, only: [:edit, :destroy, :show, :update]
 
   def index
@@ -41,6 +40,6 @@ class CocktailsController < ApplicationController
   end
 
   def cocktail_params
-    params.require(:cocktail).permit(:name)
+    params.require(:cocktail).permit(:name, :photo)
   end
 end

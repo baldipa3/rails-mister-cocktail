@@ -17,6 +17,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'webpacker'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
+gem 'devise'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
@@ -33,9 +34,7 @@ gem 'font-awesome-sass', '~> 5.6.1'
 gem 'simple_form'
 gem 'jquery-rails'
 gem 'dotenv-rails', groups: [:development, :test]
-
-
-
+gem 'cloudinary', '~> 1.12.0'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 

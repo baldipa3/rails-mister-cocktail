@@ -1,6 +1,13 @@
-.navbar-lewagon {
+.sticky {
   justify-content: space-between;
-  background: white;
+  background-color: black;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  margin-bottom: 24px;
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +16,49 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.icon {
+  color: white;
+  opacity: 1;
+  text-decoration: none;
+  font-size: 36px;
+  padding: 0px 10px;
+  i {
+    display: inline;
+
+  }
+  h2 {
+    display: inline;
+
+  }
+  &:hover {
+    opacity: 0.8;
+    cursor:pointer;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.new-cocktail {
+  font-family: "Raleway", "Helvetica", "sans-serif";
+  color: white;
+  opacity: 1;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 16px 10px 0px 10px;
+  position: absolute;
+  left: 600px;
+  top: 12px;
+  border: 2px ridge;
+  text-align: center;
+  line-height: 10px;
+  border-radius: 16px;
+  font-weight: bold;
+  &:hover {
+    opacity: 0.8;
+    cursor:pointer;
+    color: white;
+    text-decoration: none;
+  }
 }

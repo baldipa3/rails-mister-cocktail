@@ -1,14 +1,54 @@
-.card-category {
-  background-size: cover;
+.cards {
+  height: 250px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background-size: contain;
+  margin: 15px 0;
   background-position: center;
-  height: 180px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  position: relative;
+  background-repeat: no-repeat;
+  background: black;
 }
+
+
+.card-link {
+  position: absolute;
+  top: 15px;
+  bottom: 15px;
+  left: 15px;
+  width: calc(100% - 30px);
+  z-index: 2;
+  background: black;
+  opacity: 0;
+    &:hover {
+    opacity: 0.2;
+    cursor: pointer;
+  }
+}
+
+.card-category {
+  color: #D0D7B5;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-family: 'Josefin Slab', serif;
+}
+
+.card-description {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-family: 'Playfair Display SC', serif;
+}
+
+  // h2 {
+  //   font-family: 'Playfair Display SC', serif;
+  //   color: white !important;
+  //   position: absolute;
+  //   left: 24px;
+  //   top: 8px;
+  // }
+  // p {
+  //   font-family: 'Josefin Slab', serif;
+  // }
