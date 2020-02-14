@@ -8,14 +8,7 @@
   top: 0;
   width: 100%;
   z-index: 1;
-}
-
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+  padding-right: 50px;
 }
 
 .icon {
@@ -47,14 +40,29 @@
   text-decoration: none;
   font-size: 16px;
   padding: 16px 10px 0px 10px;
-  position: absolute;
-  left: 600px;
+  left: 650px;
   top: 12px;
+  // position: absolute;
   border: 2px ridge;
   text-align: center;
   line-height: 10px;
   border-radius: 16px;
   font-weight: bold;
+  &:hover {
+    opacity: 0.8;
+    cursor:pointer;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.nav-lk {
+  color: white;
+  opacity: 1;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 0px 10px;
+  font-family: "Raleway", "Helvetica", "sans-serif";
   &:hover {
     opacity: 0.8;
     cursor:pointer;

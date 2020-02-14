@@ -1,0 +1,37 @@
+.button {
+  background-color: #8B0000;
+  box-shadow: 1px 1px #AFB599;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.button-add {
+  background-color: #1E90FF;
+  color: white;
+  padding: 2px 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 8px;
+  border-radius: 4px;
+}
+
+.button-remove {
+  background-color: #8B0000;
+  color: white;
+  padding: 2px 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 8px;
+  border-radius: 4px;
+}
+
+.button-search {
+  height: 40px;
+}

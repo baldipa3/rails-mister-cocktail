@@ -1,0 +1,29 @@
+@media (min-width: 768px) {
+  .contain {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .contain {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contain {
+    width: 1170px;
+  }
+}
+@media (min-width: 1300px) {
+  .contain {
+      width: 1200px;
+  }
+}
+
+.contain {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}

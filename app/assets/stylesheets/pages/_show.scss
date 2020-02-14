@@ -1,0 +1,55 @@
+.wrapper-show {
+  position: relative;
+  margin: 50px auto;
+  padding: 50px;
+  background-color: #F5DEB3;
+  width: 80%;
+  border-radius: 40px;
+  box-shadow: 1px 1px 1px #AFB599;
+}
+
+.wrapper-edit-link {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
+
+
+.wrapper-header {
+  width: 95%;
+  margin: auto;
+  position: relative;
+}
+
+.wrapper-img {
+  height: 350px;
+  width: 80%;
+  min-width: 100px;
+  max-width: 800px;
+  position: relative;
+  border-radius: 50%;
+  background-size: cover !important;
+  background-repeat: no-repeat;
+}
+
+.dose-display {
+  width: 95%;
+  margin: auto;
+  box-shadow: 1px 1px 1px #DCDCDC;
+  h3 {
+    font-family: 'Marck Script', cursive;
+  }
+}
+
+.rounded {
+  border-radius: 10px;
+}
+
+.wrapper-grey {
+  background-color: #EBEBEB;
+}
+
+.p-display {
+    font-family: 'Marck Script', cursive;
+  }
+

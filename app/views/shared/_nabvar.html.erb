@@ -1,14 +1,46 @@
 <div class="navbar sticky navbar-expand-sm navbar-light sticky navbar-fixed-top">
   <%= link_to root_path, class: "icon" do %>
-    <div>
-      <i class="fas fa-cocktail"></i>
-      <h2>Awsome Cocktails</h2>
+  <div>
+    <i class="fas fa-cocktail"></i>
+    <h2>Awesome Cocktails</h2>
+  </div>
+  <% end %>
+  <% if user_signed_in? %>
+    <%= link_to new_cocktail_path, class: "new-cocktail" do %>
+      <p>Add Your Own Cocktail</p>
+    <% end %>
+  <% else %>
+    <%= link_to new_user_session_path, class: "new-cocktail" do %>
+      <p>Add Your Own Cocktail</p>
+    <% end %>
+  <% end %>
+  <div>
+    <%= render "sub_shared/search" %>
+  </div>
+  <div>
+    <div class="navbar-collapse">
+      <ul class="navbar-nav">
+        <% if user_signed_in? %>
+          <% if current_user.photo.attached? %>
+            <li class="dropdown">
+              <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+              <%= render "sub_shared/dropdown" %>
+            </li>
+          <% else %>
+            <li class="dropdown">
+              <%= cl_image_tag "b5valhfhu2sxzirzwc9c", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+              <%= render "sub_shared/dropdown" %>
+            </li>
+          <% end %>
+        <% else %>
+        <li>
+          <%= link_to "Sign Up", new_user_registration_path, class: "nav-lk" %>
+        </li>
+        <li>
+          <%= link_to "Log In", new_user_session_path, class: "nav-lk" %>
+        </li>
+        <% end %>
+      </ul>
     </div>
-  <% end %>
-
-  <%= link_to new_cocktail_path, class: "new-cocktail" do %>
-    <p>Add Your Own Cocktail</p>
-  <% end %>
-
-  <h3>Search</h3>
+  </div>
 </div>

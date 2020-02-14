@@ -6,13 +6,14 @@
     <%= csp_meta_tag %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <style>@import url('https://fonts.googleapis.com/css?family=Josefin+Slab|Monoton|Playfair+Display+SC:400,700&display=swap');</style>
+    <style>@import url('https://fonts.googleapis.com/css?family=Josefin+Slab|Marck+Script|Monoton|Playfair+Display+SC:400,700&display=swap');</style>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     <%= render "shared/nabvar" %>
+    <%= render "shared/flashes" %>
     <%= yield %>
     <%= render "shared/footer" %>
 
@@ -20,3 +21,5 @@
     <%= javascript_include_tag "application" %>
   </body>
 </html>
+
+

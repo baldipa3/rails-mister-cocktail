@@ -1,0 +1,42 @@
+.form-box {
+    position: relative;
+    top: 50px;
+    margin: 50px auto;
+    padding: 50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+    border-radius: 40px;
+    box-shadow: 1px 1px 2px 2px #AFB599;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1562185669-3eca86dc3406?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1001&q=80);
+    h1 {
+      color: white;
+    }
+}
+
+.form-text {
+  color: white;
+  font-family: 'Playfair Display SC', serif;
+  font-size: 12px;
+}
+
+
+.form-log {
+  position: relative;
+  top: 50px;
+  margin: 50px auto;
+  padding: 50px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #F5F5F5;
+  width: 50%;
+  border-radius: 40px;
+  h1 {
+    color: white;
+  }
+}
+
+.amount-input {
+  margin-top: -10px;
+  padding-bottom: -2px;
+}

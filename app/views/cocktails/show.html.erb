@@ -1,10 +1,77 @@
-<h1><%= @cocktail.name%></h1>
+<div class="container" style="margin-top: -120px;">
+  <div class="row">
+    <div class="col-md-12" style="margin-top: 200px;">
+      <div class="wrapper-show">
+        <div class="wrapper-edit-link">
+          <%= link_to edit_cocktail_path(@cocktail) do  %>
+            <i class="fas fa-pencil-alt mr-4"></i>
+          <% end %>
+          <%= link_to cocktail_path(@cocktail), method: :delete, data: { confirm: "Are you sure?" } do  %>
+            <i class="fas fa-trash"></i>
+          <% end %>
+        </div>
+        <div class="wrapper-header">
+          <div class="row">
+            <div class="col-4">
+              <h1><%= @cocktail.name %></h1>
+            </div>
+            <div class="col-8">
+              <% if @cocktail.photo.attached? %>
+                <div class="wrapper-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @cocktail.photo.key, width: 400, height: 300, crop: :fill %>')">
+                </div>
+              <% else %>
+                <div class="wrapper-img" style="filter: grayscale(100%);background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path("jkh7kyurtohmrj3dmjgl", width: 400, height: 300, crop: :fill) %>')">
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+        <div class="container wrapper-grey dose-display rounded">
+          <div class="row mt-4 pt-2">
+            <div class="col-1">
+              <h3><br></h3>
+            </div>
+            <div class="col-4">
+              <h3>Ingredients</h3>
+            </div>
+            <div class="col-4">
+              <h3>Amount</h3>
+            </div>
+          </div>
+            <% @cocktail.doses.each do |dose| %>
+          <div class="row">
+            <div class="col-1">
+             <%= link_to dose_path(dose.id), method: "delete", class: "button-remove" do  %>
+               <i class="fas fa-minus"></i>
+             <% end %>
+            </div>
+            <div class="col-4 p-display">
+              <p><%= dose.ingredient.name  %></p>
+            </div>
+            <div class="col-4 p-display ">
+              <p><%= dose.amount  %></p>
+            </div>
+          </div>
+          <% end %>
+          <%= simple_form_for [@cocktail, @dose], class: "input" do |f| %>
+          <div class="row mt-4">
+            <div class="col-1">
+              <%= button_tag(type: 'submit', class: "button-add") do %>
+                <i class="fas fa-plus"></i>
+              <% end %>
+            </div>
+            <div class="col-4">
+              <h3><%= f.association :ingredient, label: false %></h3>
+            </div>
+            <div class="col-4 amount-input" style="display: inline;">
+              <h3><%= f.input :amount, as: :string, label: false %></h3>
+            </div>
+          </div>
+           <% end %>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<% @cocktail.doses.each do |dose| %>
-
-<%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
-  <p><%= dose.description %> - <%= dose.ingredient.name %></p>
-  <p><%= link_to "Delete Dose", dose_path(dose.id), method: "delete" %></p>
-  <p><%= link_to "Delete Cocktail", cocktail_path(cocktail), method: "delete" %></p>
-  <p><%= link_to "New dose", new_cocktail_dose_path(cocktail.id) %></p>
-<% end %>
