@@ -15,11 +15,7 @@ class DosesController < ApplicationController
     @cocktail = Cocktail.find(params[:cocktail_id])
     authorize @cocktail
     @dose.cocktail = @cocktail
-    if @dose.save
-      redirect_to cocktail_path(@cocktail)
-    else
-      render :new
-    end
+    redirect_to cocktail_path(@cocktail) if @dose.save
   end
 
   def edit
