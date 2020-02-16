@@ -14,7 +14,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
   def create
     super
-    current_user.photo.attach(params['user']['photo'])
+    @user.photo.attach(params['user']['photo'])
   end
 
   # GET /resource/edit
