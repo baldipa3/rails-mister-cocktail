@@ -73,6 +73,9 @@ Rails.application.configure do
   # the I18n.default_locale when a translation cannot be found).
   config.i18n.fallbacks = true
 
+  config.active_storage.service = :cloudinary
+
+
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
 
@@ -93,4 +96,3 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 end
 
-  config.active_storage.service = :cloudinary
