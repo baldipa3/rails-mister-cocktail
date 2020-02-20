@@ -15,4 +15,5 @@ user = JSON.parse(user_serialized)
 user["drinks"].each do |ingredient|
   Ingredient.create(name: ingredient["strIngredient1"])
   Ingredient.create(name: "Salt")
+  Ingredient.create(name: "Coca Cola")
 end

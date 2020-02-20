@@ -15,20 +15,8 @@
     <% end %>
   <% end %>
   <div>
-<%= form_tag root_path, method: :get do %>
-<div>
-  <div class='search-container'>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Search.."
-  %>
-    <%= button_tag(type: 'submit', class: "button-search") do %>
-       <i class="fas fa-search"></i>
-    <% end %>
+    <%= render "sub_shared/search" %>
   </div>
-</div>
-<% end %>  </div>
   <div>
     <div class="navbar-collapse">
       <ul class="navbar-nav">
