@@ -18,11 +18,6 @@ class DosesController < ApplicationController
     redirect_to cocktail_path(@cocktail) if @dose.save
   end
 
-  def edit
-    @cocktail = Cocktail.find(params[:id])
-    @dose = Dose.find(params[:id])
-  end
-
   def destroy
     @dose.destroy
     redirect_to cocktail_path(@dose.cocktail)
