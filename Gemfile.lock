@@ -55,7 +55,6 @@ GEM
     cloudinary (1.12.0)
       aws_cf_signer
       rest-client
-    coderay (1.1.2)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0)
@@ -122,12 +121,10 @@ GEM
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
     pg (1.2.2)
-      coderay (~> 1.1.0)
-      method_source (~> 0.9.0)
     puma (3.12.2)
     pundit (2.1.0)
       activesupport (>= 3.0.0)
-    rack (2.1.1)
+    rack (2.2.6.2)
     rack-proxy (0.6.5)
       rack
     rack-test (1.1.0)
